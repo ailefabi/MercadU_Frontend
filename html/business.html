@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MercadU – Emprendimientos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/business.css" />
+  <link rel="stylesheet" href="../css/logueado.css" />
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Explorar</a></li>
+    <li><a href="business.html" style="color:var(--yellow)">Emprendimientos</a></li>
+    <li><a href="#">Sobre MercadU</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="logo">Mercad<span>U</span></div>
+    <div class="nav-actions">
+      <div id="navAuthZone"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="emp-header">
+  <div class="emp-header-text">
+    <h1>Emprendimientos <em>UCR</em></h1>
+    <p>Descubrí los proyectos de tus compañeros y apoyá el talento universitario</p>
+  </div>
+  <div class="emp-search">
+    <input type="text" id="searchInput" placeholder="Buscar emprendimiento..." oninput="filtrar()" />
+  </div>
+</div>
+
+<div class="emp-filtros section">
+  <button class="filtro-btn active" onclick="filtrarCategoria('todos', this)">Todos</button>
+  <button class="filtro-btn" onclick="filtrarCategoria('comida', this)">Comida</button>
+  <button class="filtro-btn" onclick="filtrarCategoria('moda', this)">Moda</button>
+  <button class="filtro-btn" onclick="filtrarCategoria('arte', this)">Arte</button>
+  <button class="filtro-btn" onclick="filtrarCategoria('tech', this)">Tech</button>
+  <button class="filtro-btn" onclick="filtrarCategoria('salud', this)">Salud</button>
+</div>
+
+<section class="section emp-section">
+  <div id="empGrid" class="emp-grid">
+    <p class="emp-loading">Cargando emprendimientos...</p>
+  </div>
+  <p id="empEmpty" class="emp-empty" style="display:none">No se encontraron emprendimientos.</p>
+</section>
+
+<footer>
+  <div class="logo">Mercad<span>U</span></div>
+  <nav>
+    <ul>
+      <li><a href="#">Términos</a></li>
+      <li><a href="#">Privacidad</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <p>© 2026 MercadU – Hecho por y para estudiantes</p>
+</footer>
+
+<script src="../js/business.js"></script>
+<script src="../js/nav-auth.js"></script>
+</body>
+</html>

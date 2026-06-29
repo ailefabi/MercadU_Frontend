@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MercadU – Inicio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/logueado.css" />
+</head>
+<body>
+
+<!-- navegacion -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="#">Explorar</a></li>
+    <li><a href="#">Destacados</a></li>
+    <li><a href="#">Sobre MercadU</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="logo">Mercad<span>U</span></div>
+    <div class="user-menu" tabindex="0">
+      <div class="user-avatar">F</div>
+      <span class="user-name">Fabi</span>
+      <div class="dropdown">
+        <a href="#">Mi perfil</a>
+        <a href="#">Mis productos</a>
+        <a href="#">Mis reseñas</a>
+        <hr class="dropdown-divider" />
+        <a href="#" class="danger">Cerrar sesión</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- banner bienvenida -->
+<div class="greeting-banner">
+  <p>¡Bienvenida de vuelta, <strong>Fabi</strong>! 👋 ¿Qué vas a descubrir hoy?</p>
+  <a href="#" class="btn-publish">+ Publicar producto</a>
+</div>
+
+<!-- hero -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-eyebrow">El mercado universitario</span>
+    <h1>Compra y vende<br /><em>como estudiante</em></h1>
+    <p>
+      MercadU es el espacio donde los emprendedores universitarios publican sus
+      productos. Apoya a tu comunidad, descubre proyectos únicos y emprende desde
+      el campus.
+    </p>
+    <a href="#" class="btn-primary">Explorar productos</a>
+    <a href="#" class="btn-secondary">Vender aquí</a>
+  </div>
+
+  <div class="hero-visual">
+    <img src="../img/img_principal.webp" width="300">
+  </div>
+</section>
+
+<!-- mis productos -->
+<section class="section products mis-productos">
+  <div class="mis-productos-header">
+    <div>
+      <h2 class="section-title">Mis productos</h2>
+      <p class="section-subtitle">Los productos y servicios que tenés publicados</p>
+    </div>
+    <a href="#" class="btn-dark">+ Agregar producto</a>
+  </div>
+  <div class="product-grid" id="misProductosGrid">
+
+    <div class="product-card empty-card">
+      <div class="product-icon" style="background:var(--cream);border:2px dashed #ccc">📦</div>
+      <div class="product-body">
+        <p class="product-name" style="color:#aaa">Aún no tenés productos publicados</p>
+        <p class="product-desc">Publicá tu primer emprendimiento</p>
+      </div>
+      <div class="product-meta">
+        <a href="#" class="btn-publish">Publicar</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- emprendimientos desc -->
+<section class="section products">
+  <h2 class="section-title">Emprendimientos destacados</h2>
+  <p class="section-subtitle">Proyectos reales de estudiantes universitarios</p>
+  <div class="product-grid">
+
+    <a href="product.html?id=1" class="product-card" id="producto-1">
+      <div class="product-body">
+        <p class="product-seller">por @ailen.salazar.ucr</p>
+        <p class="product-name">Pack de Stickers Ilustrados</p>
+        <p class="product-desc">10 diseños únicos en vinil resistente al agua</p>
+      </div>
+      <div class="product-meta">
+        <span class="product-price">₡2,500 <small>c/u</small></span>
+        <span class="product-arrow">›</span>
+      </div>
+    </a>
+    <a href="product.html?id=2" class="product-card" id="producto-2">
+      <div class="product-body">
+        <p class="product-seller">por @jimena.ucr</p>
+        <p class="product-name">Pulseras de Macramé</p>
+        <p class="product-desc">Tejidas a mano, varios colores disponibles</p>
+      </div>
+      <div class="product-meta">
+        <span class="product-price">₡3,800 <small>par</small></span>
+        <span class="product-arrow">›</span>
+      </div>
+    </a>
+    <a href="product.html?id=3" class="product-card" id="producto-3">
+      <div class="product-body">
+        <p class="product-seller">por @hugo.ucr</p>
+        <p class="product-name">Cheesecake de Maracuyá</p>
+        <p class="product-desc">Horneado casero, porción individual</p>
+      </div>
+      <div class="product-meta">
+        <span class="product-price">₡5,500 <small>porción</small></span>
+        <span class="product-arrow">›</span>
+      </div>
+    </a>
+    <a href="product.html?id=4" class="product-card" id="producto-4">
+      <div class="product-body">
+        <p class="product-seller">por @dayana.ucr</p>
+        <p class="product-name">Diseño de Logo + Branding</p>
+        <p class="product-desc">Identidad visual completa para tu emprendimiento</p>
+      </div>
+      <div class="product-meta">
+        <span class="product-price">₡15,000 <small>paquete</small></span>
+        <span class="product-arrow">›</span>
+      </div>
+    </a>
+    <a href="product.html?id=5" class="product-card" id="producto-5">
+      <div class="product-body">
+        <p class="product-seller">por @kesly.ucr</p>
+        <p class="product-name">Vela Aromática de Soya</p>
+        <p class="product-desc">Aromas naturales, quema limpia y duradera</p>
+      </div>
+      <div class="product-meta">
+        <span class="product-price">₡4,200 <small>c/u</small></span>
+        <span class="product-arrow">›</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- footer -->
+<footer>
+  <div class="logo">Mercad<span>U</span></div>
+  <nav>
+    <ul>
+      <li><a href="#">Términos</a></li>
+      <li><a href="#">Privacidad</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <p>© 2026 MercadU – Hecho por y para estudiantes</p>
+</footer>
+
+</body>
+</html>

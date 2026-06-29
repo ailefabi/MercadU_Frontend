@@ -1,0 +1,138 @@
+:root {
+  --green-dark:  #1b4d2e;
+  --green-mid:   #2d7a4f;
+  --green-light: #c5e8c8;
+  --pink:        #f2a7c3;
+  --yellow:      #f5c842;
+  --peach:       #f5b88a;
+  --cream:       #f5f0e8;
+  --white:       #ffffff;
+  --text-dark:   #111111;
+
+  --font-display: 'Nunito', sans-serif;
+  --font-body:    'Space Grotesk', sans-serif;
+
+  --radius-card: 20px;
+  --radius-btn:  50px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-body);
+    color: var(--text-dark);
+}
+
+body {
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--white);
+    border-radius: var(--radius-card);
+    border: 2px solid var(--green-dark);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 30px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.brand {
+    font-family: var(--font-display);
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--green-dark);
+    text-align: center;
+    margin-bottom: 2px;
+    letter-spacing: -0.5px;
+}
+
+h2 {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--green-mid);
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+}
+
+input, select {
+    background-color: var(--cream);
+    border: 1px solid transparent;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    width: 100%;
+    border-radius: calc(var(--radius-card) / 2);
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+input:focus, select:focus {
+    border-color: var(--green-mid);
+    background-color: var(--white);
+}
+
+input::placeholder {
+    color: #888;
+}
+
+.select-container {
+    width: 100%;
+}
+
+
+button {
+    font-family: var(--font-display);
+    border-radius: var(--radius-btn);
+    border: none;
+    background-color: var(--green-dark);
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: var(--green-mid);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.toggle-text {
+    margin-top: 25px;
+    font-size: 14px;
+    text-align: center;
+    color: var(--text-dark);
+}
+
+.toggle-text a {
+    color: var(--green-mid);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.toggle-text a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none !important;
+}

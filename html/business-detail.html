@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MercadU – Detalle de Emprendimiento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght=400;700;900&family=Space+Grotesk:wght=400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/business-detail.css" />
+  <link rel="stylesheet" href="/css/logueado.css" />
+</head>
+<body class="business-detail-page">
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Explorar</a></li>
+    <li><a href="business.html">Emprendimientos</a></li>
+    <li><a href="#">Sobre MercadU</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="logo">Mercad<span>U</span></div>
+    <div class="nav-actions">
+      <div id="navAuthZone"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb" style="padding: 15px 4%; max-width: 1200px; margin: 0 auto;">
+  <a href="business.html" style="color: var(--purple-dark, #4a148c); text-decoration: none; font-size: 14px;">‹ Volver a Emprendimientos</a>
+</div>
+
+<section class="emp-header">
+  <div class="emp-header-text">
+    <span id="businessCat" class="emp-categoria">Cargando...</span>
+    <h1 id="businessTitle">–</h1>
+    <p id="businessDesc">Cargando descripción del emprendimiento estudiantil...</p>
+  </div>
+</section>
+
+<section class="section detail-products-section">
+  <h2 class="emp-name detail-section-title">Catálogo de Productos</h2>
+  <p class="detail-section-subtitle">Productos exclusivos ofrecidos por este emprendimiento</p>
+  
+  <div class="product-grid" id="businessProductsGrid">
+    <p class="emp-loading">Cargando catálogo de productos...</p>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Mercad<span>U</span></div>
+  <nav>
+    <ul>
+      <li><a href="#">Términos</a></li>
+      <li><a href="#">Privacidad</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <p>© 2026 MercadU – Hecho por y para estudiantes</p>
+</footer>
+
+<script src="../js/business-detail.js"></script>
+<script src="../js/nav-auth.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MercadU – Mi perfil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/logueado.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+</head>
+<body>
+
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Explorar</a></li>
+    <li><a href="business.html">Emprendimientos</a></li>
+    <li><a href="#">Sobre MercadU</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="logo">Mercad<span>U</span></div>
+    <div id="navAuthZone"></div>
+  </div>
+</nav>
+
+<div class="profile-header">
+  <div class="profile-avatar-big" id="profileAvatarBig">?</div>
+  <div class="profile-header-info">
+    <h1 id="profileName">Cargando...</h1>
+    <p id="profileEmail" class="profile-email">–</p>
+    <span id="profileRol" class="profile-badge">–</span>
+  </div>
+</div>
+
+<div class="profile-body section">
+
+  <div id="noSession" class="profile-empty-state" style="display:none">
+    <div class="empty-icon"></div>
+    <h2>Necesitás iniciar sesión</h2>
+    <p>Para ver tu perfil y gestionar tus productos, iniciá sesión primero.</p>
+    <a href="login.html" class="btn-dark">Iniciar sesión</a>
+  </div>
+
+  <div id="withSession" style="display:none">
+
+    <div class="profile-section-card" id="businessBlock">
+      <div class="profile-section-header">
+        <h2>Mi emprendimiento</h2>
+      </div>
+      <div id="businessContent">
+        </div>
+    </div>
+
+    <div class="profile-section-card" id="productsBlock" style="display:none">
+      <div class="profile-section-header">
+        <h2>Mis productos</h2>
+        <button class="btn-dark" id="btnAddProduct" onclick="abrirModalProducto()">+ Agregar producto</button>
+      </div>
+      <div class="product-grid" id="profileProductGrid">
+        <p style="color:#aaa;font-size:14px">Cargando tus productos...</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="modalBusiness" class="modal-overlay" style="display:none">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Crear mi emprendimiento</h3>
+      <button class="modal-close" onclick="cerrarModal('modalBusiness')">✕</button>
+    </div>
+    <div class="form-group">
+      <label>Nombre del emprendimiento</label>
+      <input type="text" id="bName" placeholder="Ej: Stickers by Ailen" />
+    </div>
+    <div class="form-group">
+      <label>Descripción</label>
+      <textarea id="bDesc" placeholder="Contá de qué trata tu emprendimiento..." rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Categoría</label>
+      <select id="bCategory">
+        <option value="" disabled selected>Seleccioná una categoría</option>
+        <option value="comida">Comida</option>
+        <option value="moda">Moda</option>
+        <option value="arte">Arte</option>
+        <option value="tech">Tech</option>
+        <option value="salud">Salud</option>
+        <option value="general">General</option>
+      </select>
+    </div>
+    <div class="form-msg" id="businessMsg"></div>
+    <button class="btn-submit-modal" onclick="crearEmprendimiento()">Crear emprendimiento</button>
+  </div>
+</div>
+
+<div id="modalEditBusiness" class="modal-overlay" style="display:none">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Editar mi emprendimiento</h3>
+      <button class="modal-close" onclick="cerrarModal('modalEditBusiness')">✕</button>
+    </div>
+    <div class="form-group">
+      <label>Nombre del emprendimiento</label>
+      <input type="text" id="editBName" />
+    </div>
+    <div class="form-group">
+      <label>Descripción</label>
+      <textarea id="editBDesc" rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Categoría</label>
+      <select id="editBCategory">
+        <option value="comida">Comida</option>
+        <option value="moda">Moda</option>
+        <option value="arte">Arte</option>
+        <option value="tech">Tech</option>
+        <option value="salud">Salud</option>
+        <option value="general">General</option>
+      </select>
+    </div>
+    <div class="form-msg" id="editBusinessMsg"></div>
+    <button class="btn-submit-modal" onclick="actualizarEmprendimiento()">Guardar Cambios</button>
+  </div>
+</div>
+
+<div id="modalProduct" class="modal-overlay" style="display:none">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3>Publicar producto</h3>
+      <button class="modal-close" onclick="cerrarModal('modalProduct')">✕</button>
+    </div>
+    <div class="form-group">
+      <label>Nombre del producto</label>
+      <input type="text" id="pName" placeholder="Ej: Pack de stickers" />
+    </div>
+    <div class="form-group">
+      <label>Descripción</label>
+      <textarea id="pDesc" placeholder="Describí tu producto..." rows="3"></textarea>
+    </div>
+    <div class="form-group">
+      <label>Precio (₡)</label>
+      <input type="number" id="pPrice" placeholder="Ej: 2500" min="0" />
+    </div>
+    <div class="form-msg" id="productMsg"></div>
+    <button class="btn-submit-modal" onclick="publicarProducto()">Publicar producto</button>
+  </div>
+</div>
+
+<footer>
+  <div class="logo">Mercad<span>U</span></div>
+  <p>© 2026 MercadU – Hecho por y para estudiantes</p>
+</footer>
+
+<script src="../js/profile.js"></script>
+<script src="../js/nav-auth.js"></script>
+</body>
+</html>

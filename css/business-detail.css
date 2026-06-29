@@ -1,0 +1,204 @@
+/* =====================================================
+   business-detail.css
+   ===================================================== */
+
+/* ── CONFIGURACIÓN DE PÁGINA Y CONTENEDOR ── */
+.business-detail-page {
+    background-color: var(--white, #ffffff);
+    margin: 0;
+    font-family: var(--font-body, 'Nunito', sans-serif);
+}
+
+/* Regreso / Breadcrumb */
+.business-detail-page .detail-breadcrumb {
+    padding: 24px 48px;
+    background: transparent;
+}
+
+.business-detail-page .detail-breadcrumb a {
+    text-decoration: none;
+    color: var(--green-mid, #2e7d32);
+    font-weight: 600;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.business-detail-page .detail-breadcrumb a:hover {
+    color: var(--green-dark, #1b4d2e);
+}
+
+/* ── HERO HEADER DEL EMPRENDIMIENTO ── */
+.business-detail-page .emp-header {
+    background: var(--green-dark, #1b4d2e);
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de fondo circular decorativo */
+.business-detail-page .emp-header::before {
+    content: '';
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: var(--green-mid, #2e7d32);
+    opacity: .12;
+    top: -120px;
+    right: 10%;
+    pointer-events: none;
+}
+
+.business-detail-page .emp-header-text {
+    position: relative;
+    z-index: 2;
+}
+
+.business-detail-page .emp-header .emp-categoria {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green-dark, #1b4d2e);
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    background: var(--yellow, #ffc107);
+    padding: 4px 14px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.business-detail-page .emp-header-text h1 {
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    color: var(--white, #ffffff);
+    line-height: 1.1;
+    margin: 0 0 12px 0;
+}
+
+.business-detail-page .emp-header-text p {
+    color: var(--green-light, #c8e6c9);
+    font-size: 15px;
+    max-width: 600px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ── SECCIÓN DEL CATÁLOGO ── */
+.business-detail-page .detail-products-section {
+    padding: 56px 48px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.business-detail-page .detail-section-title {
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    color: var(--green-dark, #1b4d2e);
+    font-size: 26px;
+    font-weight: 800;
+    margin: 0 0 6px 0;
+}
+
+.business-detail-page .detail-section-subtitle {
+    color: #666666;
+    font-size: 14px;
+    margin: 0 0 40px 0;
+}
+
+/* ── REJILLA DE PRODUCTOS (GRID) ── */
+.business-detail-page .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+/* Tarjeta individual de Producto */
+.business-detail-page .product-card {
+    background: var(--cream, #fdfbf7);
+    border: 2px solid #e5e5e5;
+    border-radius: var(--radius-card, 16px);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    gap: 20px;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.business-detail-page .product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(27,77,46,.08);
+    border-color: var(--green-mid, #2e7d32);
+}
+
+/* Contenido interno de la tarjeta */
+.business-detail-page .product-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.business-detail-page .product-name {
+    font-family: var(--font-display, 'Space Grotesk', sans-serif);
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--green-dark, #1b4d2e);
+    margin: 0;
+}
+
+.business-detail-page .product-desc {
+    font-size: 13px;
+    color: #555555;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Meta / Precio inferior */
+.business-detail-page .product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,.05);
+    padding-top: 16px;
+}
+
+.business-detail-page .product-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--green-dark, #1b4d2e);
+}
+
+/* Estados de carga y error */
+.business-detail-page .emp-loading {
+    color: #aaaaaa;
+    font-size: 14px;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ── RESPONSIVE ADAPTABILITY ── */
+@media (max-width: 768px) {
+    .business-detail-page .detail-breadcrumb {
+        padding: 16px 24px;
+    }
+    
+    .business-detail-page .emp-header {
+        padding: 40px 24px;
+    }
+    
+    .business-detail-page .detail-products-section {
+        padding: 40px 24px;
+    }
+    
+    .business-detail-page .product-grid {
+        grid-template-columns: 1fr; /* Una columna completa en pantallas pequeñas */
+        gap: 20px;
+    }
+}

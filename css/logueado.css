@@ -1,0 +1,127 @@
+/* ── menu usuario ── */
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--yellow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 15px;
+  color: var(--green-dark);
+  flex-shrink: 0;
+  transition: transform .15s;
+}
+
+.user-menu:hover .user-avatar { transform: scale(1.08); }
+
+.user-name {
+  color: var(--green-light);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ── dropdown ── */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.15);
+  min-width: 180px;
+  overflow: hidden;
+  display: none;
+  z-index: 200;
+}
+
+.user-menu:hover .dropdown,
+.user-menu:focus-within .dropdown { display: block; }
+
+.dropdown a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--green-dark);
+  text-decoration: none;
+  transition: background .15s;
+}
+
+.dropdown a:hover { background: var(--cream); }
+.dropdown a.danger { color: #c00; }
+.dropdown a.danger:hover { background: #fff0f0; }
+
+.dropdown-divider {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 4px 0;
+}
+
+/* ── banner bienvenida ── */
+.greeting-banner {
+  background: var(--green-dark);
+  padding: 12px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 3px solid var(--yellow);
+}
+
+.greeting-banner p {
+  color: var(--green-light);
+  font-size: 13px;
+}
+
+.greeting-banner strong { color: var(--yellow); }
+
+.btn-publish {
+  background: var(--yellow);
+  color: var(--green-dark);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 6px 16px;
+  border-radius: var(--radius-btn);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .15s;
+}
+
+.btn-publish:hover { transform: scale(1.04); }
+
+/* ── productos ── */
+.mis-productos-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.empty-card { cursor: default; }
+.empty-card:hover { transform: none; box-shadow: none; }
+
+.empty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #999;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  padding: 20px;
+}

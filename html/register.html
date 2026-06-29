@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="/css/login.css" />
+        <title>Registro</title>
+    </head>
+    
+    <body>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form id="userForm">
+                    <span class="brand">MercadU</span>
+                    <h2>Crear Cuenta</h2>
+                    
+                    
+                    
+                    <input type="text" id="userName" placeholder="Nombre completo" required />
+                    
+                    <input type="email" id="userEmail" placeholder="Correo institucional" required />
+                    
+                    <input type="password" id="userPassword" placeholder="Contraseña" required />
+                    
+                    <select id="userRol" required>
+                        <option value="" disabled selected>Seleccione su rol</option>
+                        <option value="ESTUDIANTE">Estudiante</option>
+                        <option value="VENDEDOR">Vendedor</option>
+                    </select>
+                    
+                    <div id="message" ></div>
+                    
+                    <button type="submit">Registrarse</button>
+                    <p class="toggle-text">¿Ya tienes una cuenta? <a href="login.html" id="signIn">Inicia sesión</a></p>
+                </form>
+            </div>
+        </div>
+        <script src="../js/register.js"></script>
+    </body>
+    
+</html>

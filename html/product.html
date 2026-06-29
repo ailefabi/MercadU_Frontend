@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MercadU – Producto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../css/home.css" />
+<link rel="stylesheet" href="../css/product.css" />
+<link rel="stylesheet" href="../css/logueado.css" />
+</head>
+<body>
+
+<!-- nav -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">Explorar</a></li>
+    <li><a href="#">Destacados</a></li>
+    <li><a href="#">Sobre MercadU</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="logo">Mercad<span>U</span></div>
+    <div class="nav-actions">
+      <div id="navAuthZone"></div>
+    </div>
+  </div>
+</nav>
+
+<!-- breadcrumb -->
+<div class="breadcrumb">
+  <a href="index.html">Inicio ></a>
+</div>
+
+<!-- producto -->
+<div class="product-page">
+
+  <!-- info -->
+  <div class="product-card-detail">
+    <div class="product-icon-big"></div>
+    <p class="detail-categoria">–</p>
+  </div>
+
+  <!-- detalle -->
+  <div class="product-detail">
+    <p class="detail-seller">–</p>
+    <h1 class="detail-name">–</h1>
+
+    <div class="rating-row">
+      <div class="stars-display" id="starsDisplay"></div>
+      <span class="rating-avg" id="ratingAvg">–</span>
+      <span class="rating-count" id="ratingCount">(cargando...)</span>
+    </div>
+
+    <div class="detail-price">– <small></small></div>
+
+    <p class="detail-desc">–</p>
+
+    <div class="seller-box">
+      <div class="seller-avatar">👤</div>
+      <div class="seller-info">
+        <p>Vendedor</p>
+        <strong class="detail-vendedor">–</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<!-- reseñas -->
+<section class="reviews-section">
+  <h2>Reseñas del producto</h2>
+
+  <div class="reviews-meta">
+    <div class="big-avg" id="bigAvg">–</div>
+    <div class="avg-details">
+      <div class="stars-display" id="starsDisplayBig" style="margin-bottom:6px"></div>
+      <div id="barChart"></div>
+    </div>
+  </div>
+
+  <div class="reviews-grid" id="reviewsGrid">
+    <p style="color:#aaa;font-size:14px">Cargando reseñas...</p>
+  </div>
+
+  <div class="new-review">
+    <h3>Dejá tu reseña </h3>
+
+    <div class="form-group">
+      <label>Tu calificación</label>
+      <div class="star-picker" id="starPicker">
+        <button class="star-btn" data-val="1" onclick="setStars(1)">★</button>
+        <button class="star-btn" data-val="2" onclick="setStars(2)">★</button>
+        <button class="star-btn" data-val="3" onclick="setStars(3)">★</button>
+        <button class="star-btn" data-val="4" onclick="setStars(4)">★</button>
+        <button class="star-btn" data-val="5" onclick="setStars(5)">★</button>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comentario">Comentario</label>
+      <textarea id="comentario" placeholder="Contanos tu experiencia con este producto..." maxlength="500" oninput="updateChar()"></textarea>
+      <span class="char-count"><span id="charCount">0</span>/500</span>
+    </div>
+
+    <button class="btn-submit" onclick="enviarResena()">Publicar reseña</button>
+    <div class="form-msg" id="formMsg"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Mercad<span>U</span></div>
+  <nav>
+    <ul>
+      <li><a href="#">Términos</a></li>
+      <li><a href="#">Privacidad</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+  <p>© 2026 MercadU – Hecho por y para estudiantes</p>
+</footer>
+ <script src="../js/product.js"></script>
+ <script src="../js/nav-auth.js"></script>
+</body>
+</html>
